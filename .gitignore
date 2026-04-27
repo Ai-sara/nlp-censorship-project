@@ -1,0 +1,10 @@
+venv/
+*.pyc
+__pycache__/
+config.py
+code/test_gemini.py
+code/test_hf.py
+code/test_openrouter.py
+code/list_models.py
+code/list_free_models.py
+API.txt
