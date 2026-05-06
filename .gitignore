@@ -1,10 +1,16 @@
-venv/
+# Logs
+data/*.log
+
+# Responses (too large for GitHub)
+data/responses/
+
+# Cache
+code/__pycache__/
 *.pyc
-__pycache__/
-config.py
-code/test_gemini.py
-code/test_hf.py
-code/test_openrouter.py
-code/list_models.py
-code/list_free_models.py
+
+# Test files
+data/prompts/test_prompts.csv
+
+# API keys
+code/config.py
 API.txt
