@@ -4,13 +4,8 @@ data/*.log
 # Responses (too large for GitHub)
 data/responses/
 
-# Cache
-code/__pycache__/
-*.pyc
-
-# Test files
-data/prompts/test_prompts.csv
-
 # API keys
 code/config.py
-API.txt
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
