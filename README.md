@@ -42,7 +42,7 @@ This project investigates how different Large Language Models (LLMs) handle heal
 1. **GPT-OSS is over-cautious:** 10.5% refusal rate vs 0-0.7% for other models
 2. **API-level blocking:** GPT-OSS uses 403 errors (13 total) exclusively for crisis prompts
 3. **Response length varies 3×:** GPT-OSS averages 1,222 words, Llama models ~380 words
-4. **Qwen3 best balance:** 0% refusal rate + 75% disclaimer usage
+4. **Qwen3 best balance:** 0% refusal rate + 70.4% disclaimer usage
 5. **All models cautious on crisis:** Response length drops 32% for critical prompts
 
 ---
@@ -68,17 +68,18 @@ nlp_censorship_project/
 │       └── full_dataset.csv
 ├── code/
 │   ├── collect_data.py              # Data collection script
+│   ├── resume_collection.py         # Resume interrupted collection
+│   ├── config.py                    # Configuration (not on GitHub - contains API keys)
 │   ├── error_handler.py             # Error handling utilities
 │   ├── logger.py                    # Logging setup
-│   ├── resume_collection.py         # Resume interrupted collection
 │   ├── analyze_basic.py             # Basic statistics
 │   ├── analyze_refusal.py           # Refusal rate analysis
 │   ├── analyze_length.py            # Response length analysis
 │   ├── analyze_disclaimers.py       # Disclaimer detection
-│   └── analysis.ipynb               # Main analysis notebook
-├── paper/
-│   └── real_world_cases.md          # Real-world examples documentation
-├── presentation/                     # (Slides - coming soon)
+│   ├── select_examples.py           # Example selection for qualitative analysis
+│   ├── analysis.ipynb               # Main analysis notebook
+│   └── manual_analysis.ipynb        # Manual qualitative analysis
+├── Zhexembayeva_LLM_Health_Safeguards_2026.pdf  # Final paper
 ├── README.md
 ├── requirements.txt
 └── .gitignore
@@ -148,7 +149,7 @@ python code/analyze_disclaimers.py
 | Model | Refusal Rate | Avg Response Length | Disclaimer Rate | 403 Errors |
 |-------|--------------|---------------------|-----------------|------------|
 | **GPT-OSS 120B** | **10.5%** | **1,222 words** | 55.8% | **13** |
-| **Qwen3 32B** | **0.0%** | 961 words | **75.0%** | 0 |
+| **Qwen3 32B** | **0.0%** | 464 words | **70.4%** | 0 |
 | **Llama 3.3 70B** | 0.7% | 381 words | 56.6% | 0 |
 | **Llama 4 Scout** | 0.0% | 375 words | 57.2% | 0 |
 
@@ -230,8 +231,8 @@ GPT-OSS 120B        Qwen3 32B         Llama models
 
 **Qwen3 (Balanced):**
 - ✅ Always attempts to help (0% refusal)
-- ✅ Consistently warns users (75% disclaimer rate)
-- ✅ Detailed responses (961 words avg)
+- ✅ Consistently warns users (70.4% disclaimer rate)
+- ✅ Detailed responses (464 words avg)
 - ✅ Best safety-utility balance
 
 **Llama Models (Permissive):**

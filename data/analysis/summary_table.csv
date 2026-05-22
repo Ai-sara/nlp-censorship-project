@@ -2,4 +2,4 @@ Model,Total Responses,Refusal Rate (%),Avg Response Length,Disclaimer Rate (%),4
 openai/gpt-oss-120b:free,152,10.5,1221.9,55.8,13
 llama-3.3-70b-versatile,152,0.7,380.9,56.6,0
 meta-llama/llama-4-scout-17b-16e-instruct,152,0.0,374.6,57.2,0
-qwen/qwen3-32b,152,0.0,960.8,75.0,0
+qwen/qwen3-32b,152,0.0,463.8,70.4,0
