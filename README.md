@@ -46,7 +46,7 @@ This project investigates how different Large Language Models (LLMs) handle heal
 5. **All models cautious on crisis:** Response length drops 32% for critical prompts
 
 ---
-
+```
 ## Project Structure
 nlp_censorship_project/
 ├── data/
@@ -83,14 +83,14 @@ nlp_censorship_project/
 ├── README.md
 ├── requirements.txt
 └── .gitignore
-
+```
 ---
 
 ## Installation
 
 ```bash
 # Clone repository
-git clone https://github.com/YOUR_USERNAME/nlp_censorship_project.git
+git clone https://github.com/Ai-sara/nlp-censorship-project
 cd nlp_censorship_project
 
 # Create virtual environment
@@ -219,7 +219,7 @@ python code/analyze_disclaimers.py
 OVER-CAUTIOUS ←─────────────────→ UNDER-CAUTIOUS
 GPT-OSS 120B        Qwen3 32B         Llama models
 (10.5% refusal)     (0% refusal       (0% refusal
-+ 75% disclaimers) ~57% disclaimers)
++ 70.4% disclaimers) ~57% disclaimers)
 
 ### Model Behaviors
 
@@ -267,7 +267,7 @@ This project serves as a pilot study for potential Master's thesis expansion:
 
 ## AI Usage Disclaimer
 
-Parts of this project were developed with assistance from Anthropic's Claude 3.5 Sonnet. The AI was used to support:
+Parts of this project were developed with assistance from Anthropic's Claude and OpenAI's ChatGPT. The AI was used to support:
 
 - Prompt generation and refinement
 - Code development and debugging
